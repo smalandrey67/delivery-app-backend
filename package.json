@@ -1,0 +1,31 @@
+{
+  "name": "delivery-app-backend",
+  "version": "1.0.0",
+  "description": "this is backend to delivery-app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "start:watch": "nodemon src/server.js",
+    "prepare": "husky install",
+    "lint": "eslint src .",
+    "lint:fix": "eslint --fix src ."
+  },
+  "keywords": [
+    "nodejs",
+    "delivery",
+    "express"
+  ],
+  "author": "andrew Small",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
