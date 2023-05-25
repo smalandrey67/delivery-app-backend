@@ -1,9 +1,18 @@
 import express from "express";
 
-const app = express();
-const PORT = 5000;
-const HOST = "localhost";
+import { mongoConnect } from "./config/mongoConnect.config.js";
+import { appConfig } from "./config/app.config.js";
 
-app.listen(PORT, () => {
-	console.log(`Server running at http://${HOST}:${PORT}`);
+import { appRouter } from "./routes/app.route.js";
+
+const app = express();
+const PORT = appConfig.PORT;
+const HOST = appConfig.HOST;
+
+app.use("/api", appRouter);
+
+mongoConnect().then(() => {
+	app.listen(PORT, () => {
+		console.log(`Server running at http://${HOST}:${PORT}`);
+	});
 });
