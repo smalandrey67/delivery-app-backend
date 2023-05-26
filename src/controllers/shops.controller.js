@@ -16,7 +16,7 @@ export const shopsController = {
 	},
 
 	async getGoodsByShop(req, res) {
-		const shopName = req.params.name;
+		const shopName = req.params.shop;
 
 		const goods = await ShopsService.getGoodsByShop(shopName);
 

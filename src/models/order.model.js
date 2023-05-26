@@ -10,7 +10,8 @@ const Order = new mongoose.Schema(
 			phone: { type: String, require: [true, "please provide the phone"] },
 			address: { type: String, require: [true, "please provide the address"] }
 		},
-		goods: [Goods]
+		goods: [Goods],
+		totalSum: { type: Number, require: [true, "please provide the totalSum"] }
 	},
 	{ timestamps: true }
 );

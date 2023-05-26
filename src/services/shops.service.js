@@ -7,7 +7,7 @@ export const ShopsService = {
 		return shops;
 	},
 	async getGoodsByShop(shopName) {
-		const goodsByShop = await GoodsModel.find({ name: shopName });
+		const goodsByShop = await GoodsModel.find({ shop: shopName });
 		return goodsByShop;
 	}
 };

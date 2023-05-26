@@ -14,6 +14,6 @@ export const OrderController = {
 			throw ApiError.ServerError(messages.SUBSCRIPTION_NOT_FOUND);
 		}
 
-		return res.status(statuses.OK).json({ message: "cool" });
+		return res.status(statuses.OK).json(orderResult);
 	}
 };
